@@ -1,0 +1,246 @@
+:root {
+  --text-color: #063970;
+  --primary: #2C3A42;
+  --accent-teal: #1c7a72;
+  --accent-slate: #3d5a73;
+  --border-color: #d8dde1;
+  --bg-input: #eef1f4;
+}
+
+/* ===== Breadcrumb / page title ===== */
+.navbar-breadcrumbs .title-text,
+.navbar-breadcrumbs .title-text-form {
+  color: var(--text-color) !important;
+  font-weight: 600;
+}
+
+.navbar-breadcrumbs a svg {
+  color: var(--primary);
+}
+
+/* "Not Saved" / status pill */
+.indicator-pill.orange {
+  background-color: #c9762e !important; /* solid, no gradient */
+  color: #fff !important;
+}
+.indicator-pill.blue {
+  background-color: var(--accent-slate) !important;
+  color: #fff !important;
+}
+.indicator-pill.green {
+  background-color: var(--accent-teal) !important;
+  color: #fff !important;
+}
+
+/* ===== Custom action buttons (Permissions, Password, etc.) ===== */
+.custom-actions .btn-default,
+.inner-group-button .btn-default {
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-color);
+  color: var(--text-color) !important;
+  font-weight: 500;
+}
+
+.custom-actions .btn-default:hover,
+.inner-group-button .btn-default:hover {
+  background-color: #dfe6ec;
+}
+
+/* ===== Form tabs ===== */
+.form-tabs .nav-link {
+  color: #7c8a97;
+  border-bottom: 2px solid transparent;
+}
+
+.form-tabs .nav-link.active {
+  color: var(--text-color) !important;
+  border-bottom: 2px solid var(--accent-teal);
+  font-weight: 600;
+}
+
+.form-tabs .nav-link:hover {
+  color: var(--primary);
+}
+
+/* ===== Section headers ===== */
+.section-head {
+  color: var(--text-color);
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* ===== Field labels ===== */
+.control-label {
+  color: var(--primary);
+  font-weight: 500;
+}
+
+/* ===== Input fields (currently flat grey read-only boxes) ===== */
+.control-input input.form-control,
+.control-input textarea.form-control,
+.control-input select.form-control {
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+}
+
+.control-input input.form-control:focus,
+.control-input textarea.form-control:focus {
+  background-color: #ffffff;
+  border-color: var(--accent-teal);
+  box-shadow: 0 0 0 2px rgba(28, 122, 114, 0.15);
+}
+
+/* Read-only / disabled display values (like Gender: Male, Birth Date) */
+.control-value.like-disabled-input {
+  background-color: var(--bg-input);
+  color: var(--text-color);
+  border-radius: 6px;
+  padding: 4px 8px;
+}
+
+/* Bold read-only fields (Email, First Name in your form) */
+.control-value.like-disabled-input.bold {
+  color: var(--primary);
+  font-weight: 700;
+}
+/* ===== Full-page gradient background ===== */
+html, body {
+  min-height: 100%;
+  background: linear-gradient(
+    135deg,
+    #fdf6f0 0%,
+    #fceee3 20%,
+    #f9e2d2 35%,
+    #eef2f8 55%,
+    #e8eef7 70%,
+    #ffffff 90%
+  );
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.page-container,
+.page-body,
+.layout-side-section {
+  background: transparent !important;
+}
+
+/* Main content card floats above the gradient */
+.layout-main-section {
+  background-color: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(6, 57, 112, 0.06);
+}
+
+/* ============================================= */
+/* 1) Desktop / App icons container background   */
+/* ============================================= */
+.desktop-container {
+  background: linear-gradient(
+    135deg,
+    #fdf6f0 0%,
+    #fceee3 25%,
+    #eef2f8 60%,
+    #ffffff 100%
+  );
+  border-radius: 16px;
+  padding: 24px;
+  min-height: 100%;
+}
+
+.desktop-container .icons-container {
+  background: transparent;
+}
+
+/* ===== Navbar — richer gradient inspired by the bg ===== */
+.navbar {
+  background: linear-gradient(
+    90deg,
+    #fdf1e6 0%,
+    #f7ddc8 45%,
+    #f0e6ee 100%
+  ) !important;
+  border-bottom: none;
+  box-shadow: 0 1px 3px rgba(6, 57, 112, 0.05);
+}
+
+.navbar input.form-control {
+  background-color: #ffffff;
+  border: 1px solid rgba(6, 57, 112, 0.15);
+  color: var(--text-color);
+}
+
+
+/* ============================================= */
+/* 2) List view main section background          */
+/* ============================================= */
+.layout-main-section.layout-main-list {
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #fbf3ec 40%,
+    #eef2f8 100%
+  );
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 2px 12px rgba(6, 57, 112, 0.06);
+}
+
+.frappe-list, .result-container {
+  background: transparent !important;
+}
+
+/* Row hover / stripe stays legible over the gradient */
+.list-row-container:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* ============================================= */
+/* 3) Icon tiles — override inline grey bg        */
+/* ============================================= */
+.icon-container {
+  background-color: rgb(123, 128, 138) !important; /* fallback reset */
+  border-radius: 12px !important;
+  box-shadow: 0 2px 6px rgba(6, 57, 112, 0.12);
+}
+
+.desktop-icon:nth-of-type(6n+1) .icon-container { background: linear-gradient(135deg, #063970, #1c5d99) !important; }
+.desktop-icon:nth-of-type(6n+2) .icon-container { background: linear-gradient(135deg, #e07a3f, #f4b183) !important; }
+.desktop-icon:nth-of-type(6n+3) .icon-container { background: linear-gradient(135deg, #2C3A42, #4a5a63) !important; }
+.desktop-icon:nth-of-type(6n+4) .icon-container { background: linear-gradient(135deg, #3f7ce0, #7fb3f0) !important; }
+.desktop-icon:nth-of-type(6n+5) .icon-container { background: linear-gradient(135deg, #16a08a, #4fd3b8) !important; }
+.desktop-icon:nth-of-type(6n+6) .icon-container { background: linear-gradient(135deg, #a34ee0, #c98cf0) !important; }
+
+/* Icons that already use a logo image (Framework, Frappe CRM, Organization, etc.) stay untouched */
+.icon-container img.app-icon {
+  background: transparent !important;
+  box-shadow: none;
+}
+
+/* Caption text under each tile */
+.icon-caption .icon-title {
+  color: var(--text-color) !important;
+  font-weight: 600;
+}
+
+.app-icon {
+  color: #ffffff !important;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(6, 57, 112, 0.15);
+}
+
+/* Icon tile labels below each module tile */
+.widget-body .app-icon + div,
+.module-item .app-title,
+.standard-sidebar-item .sidebar-item-label {
+  color: var(--text-color) !important;
+  font-weight: 600;
+}
+
+/* ===== App/module icons — replace flat grey with colored gradients ===== */
+.widget-body .app-icon,
+.standard-sidebar-item .sidebar-item-icon,
+.module-item .app-icon {
+  border-radius: 12px !important;
+}
